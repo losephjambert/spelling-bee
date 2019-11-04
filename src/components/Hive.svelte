@@ -4,6 +4,9 @@
   // cell letter stub data
   const letters = ['f', 'i', 'n', 'r', 'c', 'h', 'o'];
 
+  // current word
+  let currentWord = '';
+
   const handleSubmit = e => {
     e.preventDefault();
     console.log('submit word', e.target);
@@ -12,6 +15,7 @@
   const handleClick = (e, letter) => {
     e.preventDefault();
     console.log('click cell: ', letter);
+    currentWord += letter;
   };
 </script>
 
@@ -23,7 +27,7 @@
 
 <section>
   <form on:submit={handleSubmit}>
-    <input type="text" name="word" id="word" />
+    <input type="text" name="word" id="word" bind:value={currentWord} />
   </form>
   <section class="hive">
     {#each letters as letter, i}
