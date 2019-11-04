@@ -16,13 +16,13 @@
   const addLetter = (e, letter) => {
     e.preventDefault();
     console.log('click cell: ', letter);
-    currentWord = [...currentWord, letter];
+    currentWord += letter;
   };
 
   const deleteLetter = () => {
     console.log('delete letter');
-    const newArray = currentWord.slice(0, -1);
-    currentWord = [...newArray];
+    const newWord = currentWord.slice(0, -1);
+    currentWord = newWord;
   };
 </script>
 
@@ -33,16 +33,14 @@
   form .hidden {
     visibility: collapse;
   }
+  form input[type='text'] {
+    text-align: center;
+  }
 </style>
 
 <section>
   <form on:submit={handleSubmit}>
-    <input
-      type="text"
-      name="word"
-      id="word"
-      bind:value={currentWord}
-      value={currentWord.join('')} />
+    <input type="text" name="word" id="word" bind:value={currentWord} value={currentWord} />
     <input type="submit" id="submit-form" class="hidden" />
   </form>
   <section class="hive">
