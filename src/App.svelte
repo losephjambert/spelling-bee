@@ -1,4 +1,5 @@
 <script>
+  import TitleBar from './components/TitleBar.svelte';
   export let title;
 </script>
 
@@ -8,4 +9,6 @@
   }
 </style>
 
-<h1>{title}</h1>
+<header>
+  <TitleBar />
+</header>
