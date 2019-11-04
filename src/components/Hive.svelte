@@ -30,6 +30,9 @@
   section.hive {
     position: relative;
   }
+  form .hidden {
+    visibility: collapse;
+  }
 </style>
 
 <section>
@@ -40,6 +43,7 @@
       id="word"
       bind:value={currentWord}
       value={currentWord.join('')} />
+    <input type="submit" id="submit-form" class="hidden" />
   </form>
   <section class="hive">
     {#each letters as letter, i}
@@ -48,5 +52,5 @@
   </section>
   <Button value="Delete" handleClick={deleteLetter} />
   <button>Shuffle Letters</button>
-  <button>Enter</button>
+  <label for="submit-form" tabindex="0">Enter</label>
 </section>
