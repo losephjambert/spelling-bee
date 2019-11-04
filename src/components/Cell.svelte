@@ -17,6 +17,7 @@
   text.cell-letter {
     text-transform: uppercase;
     text-anchor: middle;
+    font-size: 2rem;
   }
 </style>
 
