@@ -1,6 +1,7 @@
 <script>
   import TitleBar from './components/TitleBar.svelte';
   import MenuBar from './components/MenuBar.svelte';
+  import Hive from './components/Hive.svelte';
   export let title;
 </script>
 
@@ -14,3 +15,6 @@
   <TitleBar />
   <MenuBar />
 </header>
+<main>
+  <Hive />
+</main>
