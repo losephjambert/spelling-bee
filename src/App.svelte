@@ -1,5 +1,6 @@
 <script>
   import TitleBar from './components/TitleBar.svelte';
+  import MenuBar from './components/MenuBar.svelte';
   export let title;
 </script>
 
@@ -11,4 +12,5 @@
 
 <header>
   <TitleBar />
+  <MenuBar />
 </header>
