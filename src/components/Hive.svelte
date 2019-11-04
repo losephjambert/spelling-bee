@@ -24,6 +24,15 @@
     const newWord = currentWord.slice(0, -1);
     currentWord = newWord;
   };
+
+  const handleKeydown = e => {
+    console.log(e);
+    if (letters.includes(e.key)) {
+      console.log('this is a hive letter');
+    } else {
+      console.log('This is NOT a hive letter');
+    }
+  };
 </script>
 
 <style>
@@ -38,6 +47,7 @@
   }
 </style>
 
+<svelte:body on:keydown={handleKeydown} />
 <section>
   <form on:submit={handleSubmit}>
     <input type="text" name="word" id="word" bind:value={currentWord} value={currentWord} />
