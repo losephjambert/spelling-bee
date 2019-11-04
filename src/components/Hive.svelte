@@ -35,6 +35,6 @@
     {/each}
   </section>
   <button>Delete</button>
-  <button>Refresh</button>
+  <button>Shuffle Letters</button>
   <button>Enter</button>
 </section>
